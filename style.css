@@ -1,0 +1,23 @@
+:root {
+    --clr-bg-primary: #010916;
+    --clr-bg-secondary: #454d60;
+    
+    --clr-primary: #ffffff;
+    --clr-secondary: #b2c6d8;
+
+    --accent1: #f269ad;
+    --accent2: #52a0f2;
+    --accent3: #845cba;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--clr-bg-primary);
+    color: var(--clr-primary);
+}
