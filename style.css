@@ -1,13 +1,13 @@
 :root {
-    --clr-bg-primary: #ffffff; /* White background */
-    --clr-bg-secondary: #2e3840; /* Light grey for secondary background */
+    --clr-bg-primary: #ffffff; 
+    --clr-bg-secondary: #2e3840; 
 
-    --clr-primary: #010916; /* Dark blue for primary text */
-    --clr-secondary: #454d60; /* Muted gray-blue for secondary text */
+    --clr-primary: #010916; 
+    --clr-secondary: #454d60; 
 
-    --accent1: #f269ad; /* Soft pink for accent */
-    --accent2: #52a0f2; /* Bright blue for accent */
-    --accent3: #845cba; /* Purple for accent */
+    --accent1: #f269ad; 
+    --accent2: #52a0f2; 
+    --accent3: #845cba; 
 }
 
 ul, li {
@@ -17,6 +17,14 @@ ul, li {
 p, ul {
     margin-bottom: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
 }
 
 img {
@@ -35,16 +43,20 @@ body {
     background-color: var(--clr-bg-primary);
     color: var(--clr-primary);
     min-height: 100vh;
-    padding: 0px 20px;
+    padding: 10px 20px;
 }
 
 main {
     width: 100%;
-    padding: 0px 12px 12px 12px;
+}
+
+header {
+    text-align: center;
 }
 
 .navbar-brand {
     font-weight: 600;
+    font-size: 2rem;
 }
 
 .hero-section {
@@ -96,37 +108,42 @@ main {
 }
 
 /* INPUT */
-
-textarea {
-   
-}
-
 .input {
     border: 2px solid var(--clr-bg-secondary);
     border-radius: 1rem;
     padding: 1rem;
     overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    outline: none;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+textarea::placeholder {
+    font-weight: 600;
+}
+
+textarea::-webkit-scrollbar {
+    display: none; 
 }
 
 .input label {
     border-bottom: 1px solid var(--clr-bg-secondary);
+    font-size: 1.5rem;
     width: 100%;
     font-weight: 600;
-    padding-bottom: .7rem;
-}
-
-textarea {
-    padding-top: .5rem;
-    width: 100%;
-    height: 90%;
-    display: block;
-    border: none;
-    resize: none;
-    outline: none;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 
 /* ALL STATS */
-
 .all-stats {
     border: 2px solid var(--clr-bg-secondary);
     border-radius: 1rem;
@@ -136,10 +153,11 @@ textarea {
 
 .all-stats h4 {
     text-align: center;
-    border-bottom: 1px solid var(--clr-secondary);
+    border-bottom: 1px solid var(--clr-bg-secondary);
+    font-size: 1.5rem;
+    font-weight: 600;
     padding-bottom: .5rem;
     margin-bottom: .5rem;
-    font-weight: 600;
 }
 
 ul {
@@ -162,100 +180,25 @@ ul {
     border: 2px solid var(--clr-bg-secondary);
     border-radius: 1rem;
     padding: 1rem;
-    margin: 1rem 0;
+    margin-top: 1rem;
 }
 
 .word-cloud h3 {
     text-align: center;
     font-weight: 600;
+    border-bottom: 1px solid var(--clr-bg-secondary);
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 
 .word-cloud p {
-    height: 100px;
+    min-height: 100px;
     color: #888076;
+    overflow-y: auto;
 }
 
-
-/* Key Features */
-
-.all-features {
-    display: flex;
-    flex-direction: column;
-}
-
-.all-features h2 {
-    font-weight: 600;
-    text-align: center;
-}
-
-.all-features > p {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.feature-list {
-    display: grid;
-    grid-template-columns: minmax(1fr, 300px);
-    place-content: center;
-}
-
-.feature {
-    padding: 1rem;
-    border-top: 5px solid var(--accent2);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 0;
-    transition: all 0.5s;
-}
-
-.feature:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-1px);;
-}
-
-.feature h5 {
-    font-weight: 600;
-}
-
-.feature img{
-    width: 30%;
-    align-self: flex-end;
-}
-
-@media (min-width: 425px) {
-
-    .feature {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .feature img{
-        width: 35%;
-    }
-}
-
-@media (min-width: 425px) and (max-width: 768px) {
-    
-    .feature {
-        max-width: 400px;
-    }
-  }
-
-
-@media (min-width: 768px) {
-
-    .feature {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .feature-list {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1rem;
-    }
+.word-cloud p::-webkit-scrollbar {
+    display: none; 
 }
 
 @media (min-width: 1024px) {
