@@ -7,54 +7,89 @@
       name="description"
       content="Instantly analyze word count, character count, reading time, and readability. Perfect for content creators, students, and professionals. Optimize your writing now!"
     />
-    <link rel="icon" href="images/favicon.png" type="images/x-icon" />
+    <link rel="icon" href="images/clip.svg" type="images/x-icon" />
     <title>RapidWord</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
   </head>
+
   <body>
-    <header>
-      <a class="navbar-brand" href="#">Rapid Word</a>
+    <header class="primary-header">
+      <h1>Reliable Word Counter</h1>
+      <p>Count words, characters, sentences, and more in real-time</p>
     </header>
 
     <main>
-      <div class="hero-section">
-        <h2>Take Control of Your Writing</h2>
-        <p>Real-Time Word Counting with No Ads or Distractions</p>
-      </div>
-
-      <section class="input-stats">
-        <div class="primary-stats">
-          <p><span>0</span>characters</p>
-          <p><span>0</span>words</p>
-          <p><span>0</span>sentences</p>
-        </div>
-
-        <div class="grid">
-          <div class="input">
-            <label for="text">Enter your text</label>
-            <textarea name="user-input" id="text" placeholder="Start typing..."></textarea>
+      <section class="input">
+        <header>
+          <div>
+            <img src="images/keyboard.svg" alt="" />
+            <h3>Input Text</h3>
           </div>
-          <div class="all-stats">
-            <h4>Text Statistics</h4>
-            <ul>
-              <li>Words<span>0</span></li>
-              <li>Characters<span>0</span></li>
-              <li>Sentences<span>0</span></li>
-              <li>Paragraphs<span>0</span></li>
-              <li>Reading Time<span>0</span></li>
-              <li>Speaking Time<span>0</span></li>
-            </ul>
+          <div>
+            <button id="clear-btn">Clear</button>
+            <button id="copy-btn">Copy</button>
           </div>
-        </div>
-
-        <div class="word-cloud">
-          <h3>Word Cloud</h3>
-          <p class="word-cloud-content">Add text to generate word cloud</p>
-        </div>
+        </header>
+        <textarea name="input" id="user-input" placeholder="Start typing or paste your text here..."></textarea>
       </section>
+
+      <aside>
+        <div class="text-stats">
+          <header>
+            <img src="images/left-align.svg" alt="" />
+            <h3>Text Statistics</h3>
+          </header>
+
+          <div class="container">
+            <div class="stat">
+              <img src="images/hashtag.svg" alt="" />
+              <p>Words<span>0</span></p>
+            </div>
+
+            <div class="stat">
+              <img src="images/text.svg" alt="" />
+              <p>Characters<span>0</span></p>
+            </div>
+
+            <div class="stat">
+              <img src="images/translate.svg" alt="" />
+              <p>Sentences<span>0</span></p>
+            </div>
+
+            <div class="stat">
+              <img src="images/book.svg" alt="" />
+              <p>Paragraphs<span>0</span></p>
+            </div>
+
+            <div class="stat">
+              <img src="images/microphone.svg" alt="" />
+              <p>Speaking<span>0</span></p>
+            </div>
+
+            <div class="stat">
+              <img src="images/clock.svg" alt="" />
+              <p>Reading<span>0</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pro-tips">
+          <header>
+            <img src="images/idea.svg" alt="" />
+            <h3>Pro Tips</h3>
+          </header>
+          <ul>
+            <li>Paste text directly or start typing</li>
+            <li>Reading time based on 200 words/minute</li>
+            <li>Speaking time based one 130 words/minute</li>
+            <li>Use the copy button to save your text</li>
+          </ul>
+        </div>
+      </aside>
     </main>
   </body>
 </html>
