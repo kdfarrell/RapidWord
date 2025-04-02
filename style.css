@@ -138,6 +138,7 @@ main {
         color: #4F46E5;
         font-weight: 700;
         transition: .3s;
+        background-color: #FFF;
     }
 
     button:hover {
